@@ -174,6 +174,48 @@ for i in nums: #there was a missing colon after nums
 print(sum)
 								</code>
 							</pre>
+
+							<h3>Lesson 8: Fortune Cookie Program</h3>
+							<pre>
+								<code>
+import random
+
+fortunes = ["Good things come to those who wait.", 
+"Patience is a virtue.", 
+"The early bird gets the worm.", 
+"A wise man once said, everything in its own time and place.", 
+"Fortune cookies rarely share fortunes."]
+
+answer = input('Would you like to hear a fortune?(yes or q) ')
+
+while(answer != 'q'):
+	print(random.choice(fortunes))
+	answer = input('Would you like to hear another fortune?(yes or q) ')
+								</code>
+							</pre>
+
+							<h3>Lesson 9: Random Color Picker</h3>
+							<p>
+								Easy solution:
+							</p>
+							<pre>
+								<code>
+import random
+colors = ['red', 'yellow', 'blue', 'green', 'purple']
+color = random.choice(colors)
+print(color)
+								</code>
+							</pre>
+
+							<p>
+								One-line solution:
+							</p>
+							<pre>
+								<code>
+import random
+print(random.choice(['red', 'yellow', 'blue', 'green', 'purple']))
+								</code>
+							</pre>
 						</div>
 					</div>
 
