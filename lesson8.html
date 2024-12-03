@@ -61,15 +61,86 @@
 					<div id="main">
 						<div class="inner">
 							<h1>While Loops</h1>
-							<span class="image main"><img src="images/pic1_lesson3.webp" alt="" /></span>
+							<span class="image main"><img src="images/lesson8/pic1_lesson8.png" alt="" /></span>
 							<p>
-								
+								While loops are another conditional statement. In a while loop, the code is executed until a certain condition 
+								is met. After the condition is no longer true, the loop will stop executing and the program will go to the next 
+								line of code after the loop. These types of loops are seen most commonly in games. In most games, there is a main 
+								game loop that keeps iterating until the player dies or quits. 
 							</p>
+							<p>
+								While loops are a type of indefinite iterating loop, meaning there is no specified number of iterations the loop will 
+								make. It will keep iterating until something makes the condition false and breaks the loop. Because of this, it is very 
+								common to get stuck in an infinite loop, in which the program will keep running and there will be no way to break out 
+								of the loop. If this happens, just use <code>Ctrl+C</code> to stop running the program.
+							</p>
+							<p>
+								Here is an example of a while loop: 
+							</p>
+							<pre>
+								<code>
+import random
+
+number = random.randint(0, 100)
+
+chances = 5
+
+answer = int(input("The computer picked a number between 1 and 100. You have 5 chances to guess the number.\nGuess a number between 0 and 100: "))
+
+while(answer != number):
+	if(chances == 0):
+		print("You ran out of guesses. The correct number was ", number)
+		break
+	elif(answer > number):
+		answer = int(input("Your guess was greater than the number. Please guess again: "))
+		chances -= 1
+	elif(answer < number):
+		answer = int(input("Your guess was lower than the number. Please guess again: "))
+		chances -= 1
+	elif(answer == number):
+		print("You guessed the correct number, ", number, "in ", 5-chances, "tries!")
+		break
+								</code>
+							</pre>
+							<p>
+								This is a guessing game where the computer picks a random number and the user has to try to guess what it is 
+								in the fewest amount of guesses possible. The first couple of lines set up the game(picking the number to guess, setting 
+								the number of chances, and giving instructions to the user). The while loop, which is also a game loop, starts on the fifth 
+								line. It says while the user's answer is not the same as the computer's random number, keep iterating through this 
+								game loop. Then there are a bunch of conditionals that check for different things in the program. The first one checks to 
+								if the user has enough guesses to keep playing. If not, the program will tell them that they ran out and what the secret 
+								number was. The next two conditionals account for guessing higher or lower than the actual number, and giving the user 
+								feedback accordingly. Each time the user guesses wrong, the number of chances they have decreases by one. The last conditional 
+								checks for when the user correctly guesses the secret number, after which, the game loop/while loop will end.  
+							</p>
+							<p>
+								Another important thing to note is the <code>break</code> keyword. That tells the program to break the loop, regardless 
+								of what was happening in the program at the time. This is useful to make sure you don't accidentally write an 
+								infinity loop. 
+							</p>
+							<h3>Fortune Cookie Program</h3>
+							<p>
+								To practice, your goal is to write a program that gives the user fortunes. It will ask the user if they want to hear a 
+								fortune, and if they say yes, it will give them one. It iwill keep asking this unitl the user says they don't want to hear 
+								another fortune.
+							</p>
+							<ol>
+								<li>Create a list of fortunes. If you don’t want to make one, you can use this one to save yourself the typing:</li>
+								<p>fortunes = ["Good things come to those who wait.", "Patience is a virtue.", "The early bird gets the worm.", "A wise man once said, everything in its own time and place.", "Fortune cookies rarely share fortunes."]</p>
+								<li>Create a while loop that will quit when the user says ‘q’</li>
+								<li>In the while loop, print a random fortune and ask the user if they want to hear another one.</li>
+							</ol>
+							<p>
+								Here is an example of what your program should look like:
+							</p>
+							<span class="image main"><img src="images/lesson8/pic2_lesson8.png" alt="" /></span>
+
 
 							<h3>Additional Resources</h3>
 							<ul>
 								<li><a href="code_solutions.html">Code Solutions</a></li>
-								<li><a href="https://www.geeksforgeeks.org/python-data-types/">Data Types</a></li>
+								<li><a href="https://docs.python.org/3/library/random.html">Random Library Documentation</a></li>
+								<li><a href="https://www.w3schools.com/python/python_while_loops.asp">While Loops</a></li>
 							</ul>
 						</div>
 					</div>
