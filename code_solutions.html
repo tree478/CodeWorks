@@ -158,6 +158,22 @@ else:
 print("Good job! Your score is ", score)
 								</code>
 							</pre>
+
+							<h3>Lesson 7: Debug a Program</h3>
+							<pre>
+								<code>
+nums = [1, 2, 3, 4, 5]
+
+sum = 0
+#Because sum was inside the for loop, it reset every time the program entered the loop. To fix this, you need to move the variable declaration outside of the loop. 
+for i in nums: #there was a missing colon after nums
+	sum = sum + i
+	if(sum == 3):
+		print("hello") #missing parenthesis and quotes around hello
+
+print(sum)
+								</code>
+							</pre>
 						</div>
 					</div>
 
