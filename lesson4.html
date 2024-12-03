@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Variables</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+		<link rel="manifest" href="assets/site.webmanifest">
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">CodeWorks</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="lesson1.html">Lesson 1 - Introduction</a></li>
+							<li><a href="lesson2.html">Lesson 2 - Turtle Graphics</a></li>
+							<li><a href="lesson3.html">Lesson 3 - Data Types</a></li>
+							<li><a href="lesson4.html">Lesson 4 - Variables</a></li>
+							<li><a href="lesson5.html">Lesson 5 - For Loops</a></li>
+							<li><a href="lesson6.html">Lesson 6 - If Else Statements</a></li>
+							<li><a href="lesson7.html">Lesson 7 - Debugging</a></li>
+							<li><a href="lesson8.html">Lesson 8 - While Loops</a></li>
+							<li><a href="lesson9.html">Lesson 9 - Random Library</a></li>
+							<li><a href="code_solutions.html">Code Solutions</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Variables</h1>
+							<span class="image main"><img src="images/lesson4/pic1_lesson4.webp" alt="" /></span>
+							<p>
+								Variables are used as a way to store and manipulate data. They can store all types of data. Think of it as 
+								a box to store information, with a name so that you can find it and its contents again. Here is an example 
+								of making a variable: <code>student = "Bob"</code>. In this example, <code>student</code> is the name of 
+								the variable and always goes on the left side of the equal sign. <code>"Bob"</code> is the string value 
+								being stored in the variable and always goes on the right side of the equal sign. 
+							</p>
+
+							<p>
+								If you want to get more technical, a variable is a name given to a memory location. Basically, what that means 
+								is that the data is stored somewhere in the computer's memory and assigning it to a variable just allows you 
+								to be able to find that data again later in the program. 
+							</p>
+
+							<p>
+								It's not necessary to create a variable for every piece of data in your program. Sometimes you will have 
+								information that you don't need to reference again. But other times, you will need to find and manipulate 
+								data that you have created earlier(you will see what I mean by this in the program you are making today), 
+								and for that, variables are very useful to have. Additionally, if you have the same value in multiple locations 
+								in the same program, it would be helpful to make that value and variable and use the variable throughout 
+								your program. For example, if you are making a website and you have one color for multiple things in your 
+								code, you can make that color a variable at the top of your program and refer to the variable when assigning 
+								a color to something. If you ever want to change that color, you can just change the variable color, so you 
+								won't have to go through and change that color every single place it is used. 
+							</p>
+							<p>
+								Variables are created the fist time the are assigned to a value. After it is created, the value of a variable 
+								can be changed: you can add things to it, take things out, or change the contents completely. 
+							</p>
+							<h3>Variable Naming Conventions</h3>
+							<p>
+								There are some rules for how you can name your varibles in Python: 
+							</p>
+							<ul>
+								<li>
+									<b>Must start with a letter or underscore character: </b>You can't have a variable starting with a 
+									numerical character or any other special character. <code>@name</code> cannot be a variable name, Python 
+									will think of it as something else. 
+								</li>
+								<li>
+									<b>Can only contain alpha-numeric characters and underscores: </b><code>at_home</code> can be the name 
+									of a variable, but <code>at&home</code> cannot because it contains the ampersand character. 
+								</li>
+								<li>
+									<b>Variable names are case sensitive: </b><code>name</code>, <code>Name</code>, and <code>NAME</code> are 
+									considered three different variables in Python. 
+								</li>
+								<li>
+									<b>Cannot use keywords as names: </b>There are certain 
+									<a href="https://www.programiz.com/python-programming/keyword-list">keywords</a> in Python that cannot 
+									be used as variable names, Python will throw an error at you. 
+								</li>
+								<li>
+									<b>Variable names should be short and descriptive, and should use underscores: </b>This isn't a technical 
+									thing, but it is an "unspoken rule" used by Python programmers. Something like <code>TheNameOfTheStudent</code> 
+									is fine for the computer to understand, but for other programmers, <code>student_name</code> is more concise, so 
+									it makes more sense. Some languages use camel case to separate words, but Python uses underscores. 
+								</li>
+							</ul>
+
+							<h3>Spiral Upgrade</h3>
+							<p>
+								Now that you know how to use variables, you are going to use them to make a program that creates spirals based 
+								on what the user wants. Below is the code for it: 
+							</p>
+							<pre>
+								<code>
+import turtle
+
+width = input("How wide do you want the lines of your spiral to be? Please give an integer: ")
+width = width.lower()
+
+color = input("What color do you want the background of your spiral to be? Please give well known colors: ")
+color = color.lower()
+
+lines = input("How big do you want your spiral to be(how many lines) Give a number: ")
+lines = int(lines)
+
+window = turtle.Screen()
+window.title("Spiral Maker")
+window.setup(200, 200)
+window.bgcolor(color)
+
+t = turtle.Turtle()
+t.speed(0)
+t.width(width)
+t.pencolor("white")
+
+for x in range(lines):
+	t.forward(x + 3)
+	t.left(360/4 + 5)
+
+turtle.mainloop()
+
+								</code>
+							</pre>
+
+							<p>
+								As we saw before, the <code>input()</code> function asks the user for input for a question you put as the 
+								argument(in the parenthesis). Whatever input the user gives is being stored in variables <code>width</code>, 
+								<code>color</code>, and <code>lines</code>. In all three cases, the line after the variable assignment cleans 
+								up the user input. <code>.lower()</code> is a function that makes everything in the variable lowercase, so 
+								turtle can easily understand what the user is saying. <code>int()</code> is a function that makes a string into 
+								an integer. When you ask for and store input, even if the use gives a numerical value, it will still be stored 
+								as a string. So you have to convert it into an integer so the computer can evaluate it. 
+							</p>
+
+							<p>
+								After getting input and storing it in different variables, we are just setting up the turtle windw and pen. 
+								But in this case, intead of using actual colors and numbers as arguments, we are using the variables that we defined 
+								earlier. When the computer reads a line like <code>window.bgcolor(color)</code>, it says ok, the background color 
+								of the window is <code>color</code>, so it goes into memory and finds a value named "color", and uses that value 
+								to color the background of the window. 
+							</p>
+
+							<p>
+								After the pen and window are set up, the next three lines make the sprial. We will get into more detail about this 
+								later, but what this code is saying is that for the number of lines specified by the user, for each line, go forward 
+								a certain number of pixels(that increases with each line), and turn left a certain number of degrees. In this case, 
+								since we are dividing 360 by 4, it will be a square spiral, and the +5 at the end just increases the angle a little bit 
+								so that the spiral is tilted. 
+							</p>
+
+							<h3>Custom Spiral Maker</h3>
+
+							<p>
+								For this program, your goal is to create a custom spiral maker, similar to the one above. For this however, 
+								try to use a function we have not covered in class: turtle.numinput() and turtle.textinput(). Here are some links to 
+								help you get started:
+							</p> 
+
+							<ul>
+								<li><a href="https://www.geeksforgeeks.org/turtle-numinput-function-in-python/">Turtle numinput Function</a></li>
+								<li><a href="https://docs.python.org/3/library/turtle.html#turtle.textinput">Turtle textinput Function</a></li>
+							</ul>
+
+							<p>
+								<code>turtle.textinput</code> and <code>turtle.numinput</code> are fancier ways of collecting input from the user. 
+								Instead of having them type answers into Replit shell, these functions will open a little dialouge window on the main 
+								screen for the user to type their answer into. 
+							</p>
+
+							<p>
+								As a programmer, you will not always have a teacher to teach you how to do everything, you will need to be able to 
+								figure it out on your own by using Google as a resource. This is a good way to practice doing that!
+							</p>
+
+							<p><b>Instructions: </b></p>
+
+							<ol>
+								<li>Create a new program, import turtle, set up the turtle screen and pen.</li>
+								<li>Use the turtle.textinput() to ask the user what color they want their spiral to be</li>
+								<li>Tip: if Replit underlines this line of code saying “Argument of type "float | None" cannot be assigned to parameter "x" of type "ConvertibleToInt" in function "__new__"”, just ignore it. It will work when you run it. </li>
+								<li>Using turtle.numinput(), ask the user what they want their angle of rotation to be</li>
+								<li>Clean all the input that you receive from the user</li>
+								<li>Create your spiral</li>
+							</ol>
+
+							<p>Here's an example of what it should look like:</p>
+							<span class="image main"><img src="images/lesson4/pic2_lesson4.png" alt="" /></span>
+
+
+							<h3>Additional Resources</h3>
+							<ul>
+								<li><a href="code_solutions.html">Code Solutions</a></li>
+								<li><a href="https://www.geeksforgeeks.org/python-variables/">Variables</a></li>
+								<li><a href="https://www.geeksforgeeks.org/turtle-numinput-function-in-python/">Turtle numinput Function</a></li>
+								<li><a href="https://docs.python.org/3/library/turtle.html#turtle.textinput">Turtle textinput Function</a></li>
+							</ul>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

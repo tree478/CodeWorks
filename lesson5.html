@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>For Loops</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+		<link rel="manifest" href="assets/site.webmanifest">
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">CodeWorks</span>
+								</a>
+
+							<!-- Nav -->
+
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="lesson1.html">Lesson 1 - Introduction</a></li>
+							<li><a href="lesson2.html">Lesson 2 - Turtle Graphics</a></li>
+							<li><a href="lesson3.html">Lesson 3 - Data Types</a></li>
+							<li><a href="lesson4.html">Lesson 4 - Variables</a></li>
+							<li><a href="lesson5.html">Lesson 5 - For Loops</a></li>
+							<li><a href="lesson6.html">Lesson 6 - If Else Statements</a></li>
+							<li><a href="lesson7.html">Lesson 7 - Debugging</a></li>
+							<li><a href="lesson8.html">Lesson 8 - While Loops</a></li>
+							<li><a href="lesson9.html">Lesson 9 - Random Library</a></li>
+							<li><a href="code_solutions.html">Code Solutions</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>For Loops</h1>
+							<span class="image main"><img src="images/lesson5/pic1_lesson5.png" alt="" /></span>
+							<p>
+								For loops are a way to repeat a block of code. There is an iteration variable that keeps track of how many 
+								times the loop has been repeated. Specifically for a for-loop, there will be some limit to how many times 
+								the loop is repeated. That something can be a given number(repeat this block of code 50 times) or something 
+								the program is iterating through(repeat this code for each letter in this word)
+							</p>
+							<p>
+								For loops are a way to make your code much more efficient and to save you, the programmer, a lot of time when 
+								you are creating a program. We have used for-loops when making our spirals(I promise, this is the last time 
+								I'm going to talk about spirals). Below is the code for the for-loops we were using. The first line of the loop 
+								had a couple of important things. First of all, the <code>for</code> keyword is a Python keyword that notifies 
+								the computer that a for-loop is coming. <code>x</code> is the iteration variable(the counter that keeps track 
+								of how many times the loop is being repeated). Every time a loop through the code is done, the iteration variable 
+								increases by one, unless you specify it to increase by something else. <code>range(50)</code> told the computer 
+								to repeat the code inside the for-loop 50 times. 		
+							</p>
+							<p>
+								Note: in Python, numeric counting works different than how we count normally. When you give a number n, Python 
+								starts counting from 0 and goes up to n-1. If you count, it ends up being 50 numbers. In the example above, when 
+								given the range up to 50, Python will start at 0 and go up to 49. If you want to start counting at 1, you can specify 
+								that when you set up the for-loop. 
+							</p>
+							<pre>
+								<code>
+for x in range(50):
+	t.forward(x + 3)
+	t.left(360/4 + 5)
+								</code>
+							</pre>
+							<p>
+								Here are some more examples of loops using a given numerical range: 
+							</p>
+							<pre>
+								<code>
+for i in range(10):
+	print("hello")
+
+for i in range(10):
+	print(i)
+								</code>
+							</pre>
+							<p>
+								The first loop prints "hello" 10 times. The second loop prints the iteration variable, 
+								and that code repeats 10 times. So, the code would print numbers 0 through 9
+							</p>
+							<p>
+								Here are some examples of for-loops iterating through lists:
+							</p>
+							<pre>
+								<code>
+numbers = [1, 2, 3, 4, 5]
+
+for num in numbers:
+	print(num)
+
+for num in numbers:
+	print(num * 2)
+								</code>
+							</pre>
+							<p>
+								The first line defines a list, another Python data type that stores data of all sorts. It can 
+								store data of all types, and once a list is created, you can add things to it or take things out. 
+								We will cover this more in detail in future lessons. 
+							</p>
+							<p>
+								The first for-loop iterates through the list and prints out each element in the list. The second loop 
+								prints the result of the list element times two. 
+							</p>
+
+							<h3>Crazy Greeting Program</h3>
+							<p>
+								For this project, your goal is to create a program that asks the user for their name, and then repeats 
+								"hello *user*" as many times as the number of letters in their name. <br>Hint: <code>len()</code> 
+								returns the length of a string. 
+							</p>
+							<ol>
+								<li>Ask the user for their name and store it in a variable</li>
+								<li>Figure out how many letters are in the name(hint: use the <a href="https://www.w3schools.com/python/gloss_python_string_length.asp">length</a> function)</li>
+								<li>Create a for loop and use that number of letters as how many iterations the loop will make</li>
+								<li>Print “hello [name]”</li>
+							</ol>
+							<p>Here is an example of what it should look like: </p>
+							<span class="image main"><img src="images/lesson5/pic2_lesson5.png" alt="" /></span>
+							<h3>Additional Resources</h3>
+							<ul>
+								<li><a href="code_solutions.html">Code Solutions</a></li>
+								<li><a href="https://www.w3schools.com/python/python_for_loops.asp">For Loops</a></li>
+								<li><a href="https://www.w3schools.com/python/gloss_python_string_length.asp">Length Function</a></li>
+							</ul>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
