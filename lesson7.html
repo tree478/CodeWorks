@@ -61,7 +61,7 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Debugging</h1>
-							<span class="image main"><img src="images/lesson7/pic1_lesson7.png" alt="" /></span>
+							<span class="image main"><img src="images/lesson7/pic4_lesson7.png" alt="" /></span>
 							<p>
 								As you have done more and more coding, you have probably realized how easy it is to make errors and how hard it is to find 
 								and fix them. As you are going through and trying to find and fix your code, know that there is always a solution to whatever 
@@ -84,13 +84,57 @@
 							<span class="image main"><img src="images/lesson7/pic2_lesson7.png" alt="" /></span>
 							<h3>Print Statements</h3>
 							<p>
-
+								If you are every having a hard time trying to find where the bug in your code is, try using print statements throughout your code. 
+								Sometimes, the problem is that something unexpected is happening to your variables or a loop is not being entered or something of the sort. You can 
+								just have print statements throughout your code printing different variables or printing something when a loop is entered. This way, 
+								you will know what parts of your code work and what is happening to different aspects of the program during runtime. Knowing what is working 
+								well can help you narrow down what is not working well. 
 							</p>
+							<h3>Debug Console</h3>
+							<p>
+								A lot of conde editors will come with built-in debug consoles. This can help you see everything that happens during runtime, like seeing what variables 
+								are created, what their values are at every line of the program, and see how they change. It can also help you see which loops are being entered and 
+								how different conditionals are evaluated, which may help you figure out where the problem in your code is. The debug console also comes with a breakpoint 
+								feature, where you can stop the program at any point in time to see what different logistics of the code look like at that instant. This is helpful if your 
+								program has a lot of code and you don't want to sit there and watch it go through parts of the code that you already know work well. Here are some good videos 
+								that explain how to use the console: 
+							</p>
+							<ul>
+								<li><a href="https://www.youtube.com/watch?v=oCcTiRGPogQ">Youtube Video</a></li>
+								<li><a href="https://code.visualstudio.com/docs/editor/debugging">Another YouTube Video</a></li>
+								<li><a href="https://code.visualstudio.com/docs/editor/debugging">Article from VS Code</a></li>
+							</ul>
+							<h3>Testing</h3>
+							<p>
+								Many times, code issues arise from the computer not knowing what to do with different types of input. Or, you might have a sitation where some input works, 
+								but other inputs throw an error. In cases like this, just use trial and error to try different inputs(however, this only works for programs that take user input), 
+								and see what is causing the problem. Maybe you need another conditional to catch input that you did not initially plan for. Or maybe you didn't clean the input properly. 
+							</p>
+
+							<h3>Find and Fix the Bug</h3>
+							<p>
+								Below is a program with a couple of bug in it. You need to find the bugs and comment on them(put a hashtag in front of what you write, the computer will completely 
+								read over it so you won't get any errors), explaining what they did wrong. Then try to fix the error. <br>Hint: there are two syntax errors and one logic error. 
+							</p>
+							<pre>
+								<code>
+nums = [1, 2, 3, 4, 5]
+
+for i in nums
+	sum = 0
+	sum = sum + i
+	if(sum == 3):
+		print hello
+	
+print(sum)	
+								</code>
+							</pre>
 
 							<h3>Additional Resources</h3>
 							<ul>
 								<li><a href="code_solutions.html">Code Solutions</a></li>
-								<li><a href="https://www.geeksforgeeks.org/python-data-types/">Data Types</a></li>
+								<li><a href="https://code.visualstudio.com/docs/editor/debugging">How to Use the Debug Console</a></li>
+								<li><a href="https://www.youtube.com/watch?v=k578NF57uBE">How to Use Debug Console - YouTube</a></li>
 							</ul>
 						</div>
 					</div>
